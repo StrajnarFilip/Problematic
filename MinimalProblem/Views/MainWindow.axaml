@@ -17,7 +17,7 @@
 
     <TreeView ItemsSource="{Binding RootNode}">
         <TreeView.ItemTemplate>
-            <TreeDataTemplate ItemsSource="{Binding ChildNodes, DataType={x:Type vm:Node}}">
+            <TreeDataTemplate x:DataType="vm:Node" ItemsSource="{Binding ChildNodes}">
                 <TextBlock Text="{Binding Name}"/>
             </TreeDataTemplate>
         </TreeView.ItemTemplate>
